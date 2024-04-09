@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @create 2024/4/9 14:55
  */
 
-@DisplayName("复杂单元测试02")
+@DisplayName("02.复杂单元测试")
 @Tag("user-service-2")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserService2Test {
@@ -28,12 +28,13 @@ public class UserService2Test {
     private UserService userService;
 
     @BeforeEach
-    public void beforeEach() {
+    public void beforeEach(TestInfo info) {
         System.out.println(" ===> beforeEach ...");
         userService = new UserServiceImpl();
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
         System.out.println("userService => "+userService);
+        System.out.println("test info => " + info);
     }
 
     @AfterEach
@@ -64,6 +65,16 @@ public class UserService2Test {
         assertEquals(user.getName(), "KK200");
         assertEquals(user.getGender(), GenderEnum.Male);
         assertEquals(user.getLength(), 169.0f);
+    }
+
+    @Test
+    @DisplayName("测试注入参数")
+    @Tag("2.03")
+    public void test03(TestInfo info) {
+        System.out.println(" ===> test2.03");
+        System.out.println(this.getClass().getClassLoader());
+        System.out.println(this);
+        System.out.println("test info => " + info);
     }
 
 

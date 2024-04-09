@@ -1,9 +1,6 @@
 package io.github.kimmking.junit5.demo;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @create 2024/4/9 14:55
  */
 
-@DisplayName("常规单元测试01")
+@DisplayName("01.常规单元测试")
 @Tag("user-service-1")
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class UserService1Test {
@@ -63,6 +60,16 @@ public class UserService1Test {
         assertEquals(user.getName(), "KK200");
         assertEquals(user.getGender(), GenderEnum.Male);
         assertEquals(user.getLength(), 169.0f);
+    }
+
+    @Test
+    @DisplayName("测试注入参数")
+    @Tag("1.03")
+    public void test03(TestInfo info) {
+        System.out.println(" ===> test1.03");
+        System.out.println(this.getClass().getClassLoader());
+        System.out.println(this);
+        System.out.println("test info => " + info);
     }
 
 
