@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DisplayName("03.复杂单元测试")
 @Tag("user-service-3")
+@Order(3)
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class UserService3Test {
 
@@ -44,6 +45,7 @@ public class UserService3Test {
     @Test
     @DisplayName("测试用户ID-100")
     public void test01() {
+        System.out.println(ClassOrderer.DisplayName.class.getCanonicalName());
         System.out.println(" ===> test3.01");
         User user = userService.findById(100);
         assertNotNull(user);

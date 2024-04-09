@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("01.常规单元测试")
 @Tag("user-service-1")
+@Order(1)
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class UserService1Test {
 

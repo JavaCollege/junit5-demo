@@ -10,4 +10,10 @@ public interface UserService {
 
     User findById(int id);
 
+    class MockUserService implements UserService {
+        public User findById(int id) {
+            return null;
+        }
+    }
+
 }

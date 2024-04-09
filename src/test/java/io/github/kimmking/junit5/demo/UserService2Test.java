@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DisplayName("02.复杂单元测试")
 @Tag("user-service-2")
+@Order(2)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserService2Test {
 
