@@ -75,6 +75,8 @@ public class UserService3Test {
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
         System.out.println("test info => " + info);
+        System.out.println("AAA = " + System.getProperty("AAA"));
+        System.out.println("junit.jupiter.testclass.order.default == "+System.getProperty("junit.jupiter.testclass.order.default"));
     }
 
 

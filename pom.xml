@@ -39,15 +39,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <argLine>
+                        -DAAA=a003 -Djunit.jupiter.testclass.order.default=org.junit.jupiter.api.ClassOrderer$DisplayName
+                    </argLine>
                     <includeJUnit5Engines>
                         <engine>junit-jupiter</engine>
                     </includeJUnit5Engines>
-                    <properties>
-                        <property>
-                            <name>junit.jupiter.testclass.order.default</name>
-                            <value>org.junit.jupiter.api.ClassOrderer$DisplayName</value>
-                        </property>
-                    </properties>
                 </configuration>
             </plugin>
         </plugins>
