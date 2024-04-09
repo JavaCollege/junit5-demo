@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
- * 复杂测试：
+ * 复杂测试02：
  * 1、情况1，在TestInstance.Lifecycle.PER_CLASS情况下，实际上我们可以让userService每次在测试方法内部去初始化。
  * 但是这样做会有大量的重复代码逻辑，并且准备工作和测试放到了一起。为了对其解耦，我们可以通过添加BeforeEach和AfterEach注解，
  * 从而在每次方法调用之前，进行一个特殊的初始化或资源销毁操作，从而避免了维护重复代码。
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @create 2024/4/9 14:55
  */
 
-@DisplayName("复杂单元测试")
+@DisplayName("复杂单元测试02")
 @Tag("user-service-2")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserService2Test {

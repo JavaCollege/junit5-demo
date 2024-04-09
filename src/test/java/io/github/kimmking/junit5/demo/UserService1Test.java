@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @create 2024/4/9 14:55
  */
 
-@DisplayName("常规单元测试")
+@DisplayName("常规单元测试01")
 @Tag("user-service-1")
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class UserService1Test {
