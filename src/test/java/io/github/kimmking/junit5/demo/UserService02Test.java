@@ -17,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  */
 
 @DisplayName("02.复杂单元测试")
-@Tag("user-service-2")
-@Order(2)
+@Tag("user-service-02")
+//@Order(2)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class UserService2Test {
+public class UserService02Test {
 
-    public UserService2Test(){
-        System.out.println(" =========== new UserService2Test 类实例 =========== ");
+    public UserService02Test(){
+        System.out.println(" =========== new UserService02Test 类实例 =========== ");
     }
 
     private UserService userService;
@@ -45,9 +45,9 @@ public class UserService2Test {
     }
 
     @Test
-    @DisplayName("测试用户ID-100")
+    @DisplayName("01.测试用户ID-100")
+    @Tag("02.01")
     public void test01() {
-        System.out.println(" ===> test2.01");
         User user = userService.findById(100);
         assertNotNull(user);
         assertEquals(user.getId(),100);
@@ -57,9 +57,9 @@ public class UserService2Test {
     }
 
     @Test
-    @DisplayName("测试用户ID-200")
+    @DisplayName("02.测试用户ID-200")
+    @Tag("02.02")
     public void test02() {
-        System.out.println(" ===> test2.02");
         User user = userService.findById(200);
         assertNotNull(user);
         assertEquals(user.getId(),200);
@@ -69,13 +69,12 @@ public class UserService2Test {
     }
 
     @Test
-    @DisplayName("测试注入参数")
-    @Tag("2.03")
+    @DisplayName("03.测试注入参数")
+    @Tag("02.03")
     public void test03(TestInfo info) {
-        System.out.println(" ===> test2.03");
+        System.out.println("test info => " + info);
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
-        System.out.println("test info => " + info);
     }
 
 

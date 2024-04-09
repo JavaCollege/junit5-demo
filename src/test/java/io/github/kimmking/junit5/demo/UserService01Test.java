@@ -20,22 +20,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 
 @DisplayName("01.常规单元测试")
-@Tag("user-service-1")
-@Order(1)
-@TestInstance(TestInstance.Lifecycle.PER_METHOD)
-public class UserService1Test {
+@Tag("user-service-01")
+//@Order(1)
+//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+public class UserService01Test {
 
-    public UserService1Test(){
-        System.out.println(" =========== new UserService1Test 类实例 =========== ");
+    public UserService01Test(){
+        System.out.println(" =========== new UserService01Test 类实例 =========== ");
     }
 
     private UserService userService = new UserServiceImpl();
 
     @Test
-    @DisplayName("测试用户ID-100")
-    @Tag("1.01")
+    @DisplayName("01.测试用户ID-100")
+    @Tag("01.01")
     public void test01() {
-        System.out.println(" ===> test1.01");
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
         System.out.println(userService);
@@ -48,10 +47,9 @@ public class UserService1Test {
     }
 
     @Test
-    @DisplayName("测试用户ID-200")
-    @Tag("1.02")
+    @DisplayName("02.测试用户ID-200")
+    @Tag("01.02")
     public void test02() {
-        System.out.println(" ===> test1.02");
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
         System.out.println(userService);
@@ -64,13 +62,12 @@ public class UserService1Test {
     }
 
     @Test
-    @DisplayName("测试注入参数")
-    @Tag("1.03")
+    @DisplayName("03.测试注入参数")
+    @Tag("01.03")
     public void test03(TestInfo info) {
-        System.out.println(" ===> test1.03");
+        System.out.println("test info => " + info);
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
-        System.out.println("test info => " + info);
     }
 
 

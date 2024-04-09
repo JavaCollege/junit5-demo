@@ -15,13 +15,13 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  */
 
 @DisplayName("03.复杂单元测试")
-@Tag("user-service-3")
-@Order(3)
-@TestInstance(TestInstance.Lifecycle.PER_METHOD)
-public class UserService3Test {
+@Tag("user-service-03")
+//@Order(3)
+//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+public class UserService03Test {
 
-    public UserService3Test(){
-        System.out.println(" =========== new UserService3Test 类实例 =========== ");
+    public UserService03Test(){
+        System.out.println(" =========== new UserService03Test 类实例 =========== ");
     }
 
     private static UserService userService;
@@ -43,10 +43,9 @@ public class UserService3Test {
     }
 
     @Test
-    @DisplayName("测试用户ID-100")
+    @DisplayName("01.测试用户ID-100")
+    @Tag("03.01")
     public void test01() {
-        System.out.println(ClassOrderer.DisplayName.class.getCanonicalName());
-        System.out.println(" ===> test3.01");
         User user = userService.findById(100);
         assertNotNull(user);
         assertEquals(user.getId(),100);
@@ -56,9 +55,9 @@ public class UserService3Test {
     }
 
     @Test
-    @DisplayName("测试用户ID-200")
+    @DisplayName("02.测试用户ID-200")
+    @Tag("03.02")
     public void test02() {
-        System.out.println(" ===> test3.02");
         User user = userService.findById(200);
         assertNotNull(user);
         assertEquals(user.getId(),200);
@@ -68,15 +67,12 @@ public class UserService3Test {
     }
 
     @Test
-    @DisplayName("测试注入参数")
-    @Tag("3.03")
+    @DisplayName("03.测试注入参数")
+    @Tag("03.03")
     public void test03(TestInfo info) {
-        System.out.println(" ===> test3.03");
+        System.out.println("test info => " + info);
         System.out.println(this.getClass().getClassLoader());
         System.out.println(this);
-        System.out.println("test info => " + info);
-        System.out.println("AAA = " + System.getProperty("AAA"));
-        System.out.println("junit.jupiter.testclass.order.default == "+System.getProperty("junit.jupiter.testclass.order.default"));
     }
 
 
