@@ -21,3 +21,13 @@
 
 1. 使用BeforeAll/AfterAll时，如果是TestInstance.Lifecycle.PER_CLASS，则方法不需要是static的，否则（即TestInstance.Lifecycle.PER_METHOD），必须使用static的方法（操作的字段也需要时static）。
 
+
+
+#### 参考材料
+- [JUnit 5 - User Guide](https://junit.org/junit5/docs/current/user-guide/)
+- [Maven Surefire Plugin](https://maven.org.cn/surefire/maven-surefire-plugin/examples/junit-platform.html)
+- [从JUnit4到JUnit5](https://zhuanlan.zhihu.com/p/144763642)
+- [JUnit5 并发配置](https://blog.csdn.net/elecforest/article/details/109580723)
+- [JUnit5 自定义扩展](https://zhuanlan.zhihu.com/p/262504347)
+- [JUnit5 入门系列](https://blog.csdn.net/ryo1060732496/category_9276134.html)  这个强烈推荐
+
